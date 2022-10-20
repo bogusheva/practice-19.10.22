@@ -1,0 +1,227 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "delius_unicase";
+}
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+img {
+  width: 100%;
+}
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-architectural,
+.section-stilllife,
+.section-portrait {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container-architectural {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  justify-items: center;
+  grid-template-areas:
+    "item-1 item-2 item-2"
+    "item-3 item-3 item-4"
+    "item-5 item-6 item-6";
+}
+.photo-info {
+  font-family: "roboto";
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0em;
+  position: absolute;
+  bottom: 20px;
+  z-index: 5;
+}
+.photo-info.photo-author {
+  left: 20px;
+}
+.photo-info.photo-date {
+  right: 20px;
+}
+.img-holder {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.img-holder.item-1 {
+  grid-area: item-1;
+}
+.img-holder.item-2 {
+  grid-area: item-2;
+}
+.img-holder.item-3 {
+  grid-area: item-3;
+}
+.img-holder.item-4 {
+  grid-area: item-4;
+}
+.img-holder.item-5 {
+  grid-area: item-5;
+}
+.img-holder.item-6 {
+  grid-area: item-6;
+}
+.img-holder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: linear-gradient(
+    270deg,
+    #241f24 0%,
+    rgba(91, 91, 91, 0.447552) 34.11%,
+    rgba(187, 186, 192, 0.26) 62.5%
+  );
+  transition: all ease-in-out 0.4s;
+}
+.img-holder:hover .icon-list {
+  opacity: 1;
+}
+.img-holder:hover::before {
+  background: linear-gradient(
+    270deg,
+    #241f24 1.04%,
+    rgba(91, 91, 91, 0.26) 6.99%,
+    rgba(187, 186, 192, 0) 12.29%
+  );
+}
+.img-holder img {
+  object-fit: cover;
+  display: block;
+}
+.icon-list {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  transition: opacity ease-in-out 0.4s;
+  opacity: 0;
+}
+.icon-list a {
+  display: block;
+  background: rgba(224, 224, 224, 0.5);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  transition: background-color ease-in-out 0.4s;
+}
+.icon-list a:hover {
+  background-color: #fff;
+}
+.icon-list a .icon {
+  display: block;
+  width: 20px;
+  height: 17.5px;
+  padding: 10px;
+}
+.icon {
+  color: #4f4f4f;
+  font-weight: 900;
+}
+.container-stilllife {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  justify-items: center;
+  grid-template-areas:
+    "item-7 item-8 item-8"
+    "item-9 item-9 item-10"
+    "item-9 item-9 item-10"
+    "item-11 item-11 item-12";
+}
+.img-holder.item-7 {
+  grid-area: item-7;
+}
+.img-holder.item-8 {
+  grid-area: item-8;
+}
+.img-holder.item-9 {
+  grid-area: item-9;
+}
+.img-holder.item-10 {
+  grid-area: item-10;
+}
+.img-holder.item-11 {
+  grid-area: item-11;
+}
+.img-holder.item-12 {
+  grid-area: item-12;
+}
+.container-portrait {
+  width: 100%;
+  padding-bottom: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  justify-items: center;
+  grid-template-areas:
+    "item-13 item-14 item-15"
+    "item-16 item-14 item-17"
+    "item-18 item-19 item-17"
+    "item-18 item-20 item-20"
+    "item-21 item-21 item-22";
+}
+.img-holder.item-13 {
+  grid-area: item-13;
+}
+.img-holder.item-14 {
+  grid-area: item-14;
+}
+.img-holder.item-15 {
+  grid-area: item-15;
+}
+.img-holder.item-16 {
+  grid-area: item-16;
+}
+.img-holder.item-17 {
+  grid-area: item-17;
+}
+.img-holder.item-18 {
+  grid-area: item-18;
+}
+.img-holder.item-19 {
+  grid-area: item-19;
+}
+.img-holder.item-20 {
+  grid-area: item-20;
+}
+.img-holder.item-21 {
+  grid-area: item-21;
+}
+.img-holder.item-22 {
+  grid-area: item-22;
+}
